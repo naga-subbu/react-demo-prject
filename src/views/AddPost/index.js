@@ -86,7 +86,7 @@ class AddPost extends React.Component {
 							}
 						</select>
 					</Form.Field>
-					<Button type='submit' onClick={this.onSubmit}>Submit</Button>
+					<Button type='submit' onClick={this.onSubmit} primary>Submit</Button>
 				</Form>
 				</div>
 			</section>
