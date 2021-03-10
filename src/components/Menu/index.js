@@ -1,14 +1,23 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+
 
 import './styles.css'
 // This component is for Header displaying with help of Menu semantic-ui component
 class ExtendedMenu extends React.Component {
-	state = { activeItem: 'Dashboard' }
+	state = { activeItem: 'Dashboard' };
+	
   	handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 	render() {
-		const { activeItem } = this.state;
+		let { activeItem } = this.state;
+		if (window.location.pathname.startsWith('/posts')) {
+			activeItem= 'Posts';
+		}
+		else if (window.location.pathname === '/user') {
+			activeItem= 'Users';
+		}
 		return (
 			<div>
 				<h1 className='header'>ReactJS Demo project</h1>
@@ -37,4 +46,4 @@ class ExtendedMenu extends React.Component {
 	}
 }
 
-export default ExtendedMenu;
+export default withRouter(ExtendedMenu);
