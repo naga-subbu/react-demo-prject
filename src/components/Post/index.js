@@ -75,6 +75,7 @@ class Post extends React.Component {
 						<Button onClick={() => {this.modifyPost(postId)} }>Modify</Button>
 						<Button onClick={this.show}>Delete</Button>
 						<Confirm
+							content='Are you sure to delete post?'
 							open={this.state.open}
 							cancelButton='Never mind'
 							confirmButton="Yes, delete post"

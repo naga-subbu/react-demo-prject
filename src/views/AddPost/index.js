@@ -3,6 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Context } from "../../libs/context";
 import api from "../../libs/api";
+import './styles.css'
 
 // Components
 import { Button, Form } from 'semantic-ui-react'
@@ -55,10 +56,10 @@ class AddPost extends React.Component {
 		const { title, message, userId } = this.state;
 		return (
 			<section>
-				<h1>Add Post</h1>
+				<h1 className='FormTitle'>Add Post</h1>
 				<div>
-				<Form>
-					<Form.Field>
+				<Form className='Form'>
+					<Form.Field >
 						<label>Title</label>
 						<input onChange={this.onFieldChange} value={title} placeholder='Title' data-prop="title" />
 					</Form.Field>

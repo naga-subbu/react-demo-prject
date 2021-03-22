@@ -3,6 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Context } from "../../libs/context";
 import api from "../../libs/api";
+import '../AddPost/styles.css'
 
 // Components
 import { Button, Form } from 'semantic-ui-react'
@@ -64,9 +65,9 @@ class ModifyPost extends React.Component {
 		//debugger;
 		return (
 			<section>
-				<h1>Modify Post</h1>
+				<h1 className='FormTitle'>Modify Post</h1>
 				<div>
-				<Form>
+				<Form className='Form'>
 					<Form.Field>
 						<label>Title</label>
 						<input onChange={this.onFieldChange} value={title} placeholder={t}  data-prop="title" />

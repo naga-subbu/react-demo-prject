@@ -20,8 +20,8 @@ class ExtendedMenu extends React.Component {
 		}
 		return (
 			<div>
-				<h1 className='header'>ReactJS Demo project</h1>
-				<Menu attached='top' tabular>
+				<h1 className='header'>ReactJS Demo</h1>
+				<Menu attached='top' className='menuheader' tabular>
 				<Menu.Item as={ Link } 
 					name='Dashboard'
 					active={activeItem === 'Dashboard'}
